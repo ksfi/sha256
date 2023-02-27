@@ -24,7 +24,7 @@ The hash is the following: $$H=H_1^{(N)}||H_2^{(N)}||H_3^{(N)}||H_4^{(N)}||H_5^{
 With the $H_i^{(k)}$ recursively computed considering the initial values $H_1^{0},\ H_2^{0},\ H_3^{0},\ H_4^{0},\ H_5^{0},\ H_6^{0},\ H_7^{0},\ H_8^{0}$ that are set as the first 32 bits of the fractional part of the square roots of the first 8 prime numbers and
 
 $\forall k \in [1, n]:$
-- we set $$(a,\ b,\ c,\ d,\ e,\ f,\ g,\ h)=(H_1^{k-1},\ H_2^{k-1},\ H_3^{k-1},\ H_4^{k-1},\ H_5^{k-1},\ H_6^{k-1},\ H_7^{k-1},\ H_8^{k-1})$$
+- we set $$(a,\ b,\ c,\ d,\ e,\ f,\ g,\ h)=(H_1^{(k-1)},\ H_2^{(k-1)},\ H_3^{(k-1)},\ H_4^{(k-1)},\ H_5^{(k-1)},\ H_6^{(k-1)},\ H_7^{(k-1)},\ H_8^{(k-1)})$$
 - 64 times the following operations:
 
 $T_1 = h + \Sigma_1(e) + Ch(e,f,g) + K_i + W_i$
@@ -34,3 +34,20 @@ $T_2 = \Sigma_0(a) + Maj(a,b,c)$
 $h = g$
 
 $g = f$
+
+$f=e$
+
+$e=d + T_1$
+
+$d = c$
+
+$c = b$
+
+$b = a$
+
+$a = T_1 + T_2$
+
+And then we have the new values 
+
+$H_1^{(k)}=H_1^{(k-1)} + a,\ H_2^{(k)}=H_2^{(k-1)} + b,\ H_3^{(k)}=H_3^{(k-1)} + c,\ H_4^{(k)}=H_4^{(k-1)} + d$
+$H_5^{(k)}=H_5^{(k-1)} + e,\ H_6^{(k)}=H_6^{(k-1)} + f,\ H_7^{(k)}=H_7^{(k-1)} + g,\ H_8^{(k)}=H_8^{(k-1)} + h$
