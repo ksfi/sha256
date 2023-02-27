@@ -29,7 +29,7 @@ $\forall k \in [1, n]:$
 
 $T_1 = h + \Sigma_1(e) + Ch(e,f,g) + K_i + W_i$
 
-$T_2 = \Sigma_O(a) + Maj(a,b,c)$
+$T_2 = \Sigma_0(a) + Maj(a,b,c)$
 
 $h = g$
 
