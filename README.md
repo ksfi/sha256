@@ -18,6 +18,9 @@ For each block $\{0,1\}^{512}$, we construct 64 words of 32 bits as follows:
 $$M=W_1||W_2||...||W_{15}||W_{16}$$ 
 - the remaining 48 are obtained as follows:
 $$\forall i \in [17,64] \quad W_i = \sigma_1(W_{i-2})+W_{i-7}+\sigma_0(W_{i-15})+W_{i-16}$$
+with $\sigma_0(x) = RotR(x, 7) \bigoplus RotR(x, 18) \bigoplus ShR(x, 3)$ and $\sigma_1(x) = RotR(x,17) \bigoplus RotR(x, 19) \bigoplus ShR(x, 10)$.
+
+$RotR(x, n)$ being the circular right shift of $n$ bits of the binary word $x$ and $ShR(x, n)$ being the the right shift of $n$ bits of the binary word $A$.
 
 #### • Hash computation
 The hash is the following: $$H=H_1^{(N)}||H_2^{(N)}||H_3^{(N)}||H_4^{(N)}||H_5^{(N)}||H_6^{(N)}||H_7^{(N)}||H_8^{(N)}$$
