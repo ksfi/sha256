@@ -13,7 +13,7 @@ We want to ensure that the message has length multpile to 512 bits, thus:
 So by now, we have a message that is a multiple of 512 bits with the bit representation of the length of the initial message as the 64 last bits.
 
 #### • Block decomposition
-For each block $\{0,1\}^{512}$, we construct 64 words of 32 bits as follows:
+For each block {$0,1$}$^{512}$, we construct 64 words of 32 bits as follows:
 - the first 16 bits are obtained by splitting $M$ in 32-bit blocks:
 $$M=W_1||W_2||...||W_{15}||W_{16}$$ 
 - the remaining 48 are obtained as follows:
