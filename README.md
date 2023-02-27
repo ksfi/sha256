@@ -10,4 +10,7 @@ We want to ensure that the message has length multpile to 512 bits, thus:
 - next, k bits 0 are appended with k being the solution of the following equation: l+1+k = 448mod(512) with l the length in bits of the initial message.
 - finally we represent the length l with exactly 64 bits and we add these at the end of the message.
 
-So by now, we have a message that is a multiple of 512 bits with the length of the initial message as the 64 last bits.
+So by now, we have a message that is a multiple of 512 bits with the bit representation of the length of the initial message as the 64 last bits.
+
+#### • Block decomposition
+For each block {0,1}<sup>512</sup>
