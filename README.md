@@ -18,3 +18,9 @@ For each block $\{0,1\}^{512}$, we construct 64 words of 32 bits as follows:
 $$M=W_1||W_2||...||W_{15}||W_{16}$$ 
 - the remaining 48 are obtained as follows:
 $$\forall i \in [17,64] \quad W_i = \sigma_1(W_{i-2})+W_{i-7}+\sigma_0(W_{i-15})+W_{i-16}$$
+
+#### • Hash computation
+The hash is the following: $$H=H_1^{(N)}||H_2^{(N)}||H_3^{(N)}||H_4^{(N)}||H_5^{(N)}||H_6^{(N)}||H_7^{(N)}||H_8^{(N)}$$
+With the $H_i^{(k)}$ recursively computed considering the initial values $H_1^{0},\ H_2^{0},\ H_3^{0},\ H_4^{0},\ H_5^{0},\ H_6^{0},\ H_7^{0},\ H_8^{0}$ that are set as the first 32 bits of the fractional part of the square roots of the first 8 prime numbers, we compute the hash value one block $M_i$ at a time:
+
+$\forall i \in [1, n]:$
