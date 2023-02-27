@@ -7,3 +7,4 @@ SHA-256 is a part of the SHA-2 cryptographic algorithm, it is a hash function wi
 #### • Padding:
 We want to ensure that the message has length multpile to 512 bits, thus:
 - first a bit 1 is appended
+- next, k bits 0 are appended with k being the solution of the following equation: l+1+k = 448[512]
