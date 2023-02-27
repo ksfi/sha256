@@ -21,6 +21,10 @@ $$\forall i \in [17,64] \quad W_i = \sigma_1(W_{i-2})+W_{i-7}+\sigma_0(W_{i-15})
 
 #### • Hash computation
 The hash is the following: $$H=H_1^{(N)}||H_2^{(N)}||H_3^{(N)}||H_4^{(N)}||H_5^{(N)}||H_6^{(N)}||H_7^{(N)}||H_8^{(N)}$$
-With the $H_i^{(k)}$ recursively computed considering the initial values $H_1^{0},\ H_2^{0},\ H_3^{0},\ H_4^{0},\ H_5^{0},\ H_6^{0},\ H_7^{0},\ H_8^{0}$ that are set as the first 32 bits of the fractional part of the square roots of the first 8 prime numbers, we compute the hash value one block $M_i$ at a time:
+With the $H_i^{(k)}$ recursively computed considering the initial values $H_1^{0},\ H_2^{0},\ H_3^{0},\ H_4^{0},\ H_5^{0},\ H_6^{0},\ H_7^{0},\ H_8^{0}$ that are set as the first 32 bits of the fractional part of the square roots of the first 8 prime numbers and
 
-$\forall i \in [1, n]:$
+$\forall k \in [1, n]:$
+- we set $$(a,\ b,\ c,\ d,\ e,\ f,\ g,\ h)=(H_1^{k-1},\ H_2^{k-1},\ H_3^{k-1},\ H_4^{k-1},\ H_5^{k-1},\ H_6^{k-1},\ H_7^{k-1},\ H_8^{k-1})$$
+- 64 times the following operations:
+$$
+$$
