@@ -26,5 +26,11 @@ With the $H_i^{(k)}$ recursively computed considering the initial values $H_1^{0
 $\forall k \in [1, n]:$
 - we set $$(a,\ b,\ c,\ d,\ e,\ f,\ g,\ h)=(H_1^{k-1},\ H_2^{k-1},\ H_3^{k-1},\ H_4^{k-1},\ H_5^{k-1},\ H_6^{k-1},\ H_7^{k-1},\ H_8^{k-1})$$
 - 64 times the following operations:
-$$
-$$
+
+$T_1 = h + \Sigma_1(e) + Ch(e,f,g) + K_i + W_i$
+
+$T_2 = \Sigma_O(a) + Maj(a,b,c)$
+
+$h = g$
+
+$g = f$
