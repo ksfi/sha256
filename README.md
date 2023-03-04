@@ -54,3 +54,7 @@ And then we have the new values
 
 $H_1^{(k)}=H_1^{(k-1)} + a,\ H_2^{(k)}=H_2^{(k-1)} + b,\ H_3^{(k)}=H_3^{(k-1)} + c,\ H_4^{(k)}=H_4^{(k-1)} + d$
 $H_5^{(k)}=H_5^{(k-1)} + e,\ H_6^{(k)}=H_6^{(k-1)} + f,\ H_7^{(k)}=H_7^{(k-1)} + g,\ H_8^{(k)}=H_8^{(k-1)} + h$
+
+## TODO
+
+real tests lol
